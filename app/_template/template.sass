@@ -1,51 +1,16 @@
 html,
 body
+	@extend .__font-default
 	margin: 0
-	font-family: 'gothic', system-ui
 	color: $fc
-	letter-spacing: 0.5px
-	background-color: $bc
-	font-size: $fz
-
-p
-	margin-top: 0
-	margin-bottom: $p
-
-ol,
-ul
-	padding-left: $p
-	margin: 0 0 $p $pl
-li
-	margin-bottom: $ps
-
-a
-	text-decoration: none
-	color: inherit
-	cursor: pointer
-	&:hover
-		color: $c
-
-img
-	max-width: 100%
-
-table
-	caption-side: bottom
-	border-collapse: collapse
+	background-color: $bodyc
 
 input, button
 	outline: none
-	font-size: $fz + 2px
 	cursor: pointer
-	font-weight: bold
 
 *:focus-visible
 	outline: none
 
 *, ::after, ::before
 	box-sizing: border-box
-
-header,
-main,
-footer
-	display: block
-	min-width: 100%

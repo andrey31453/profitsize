@@ -1,0 +1,66 @@
+// item
+.todo__item
+	margin-bottom: $p
+	width: 100%
+	@extend .__f
+	@extend .__fnw
+	&:hover
+		cursor: pointer
+		.todo__item__text
+			color: $c !important
+	&.--checked:hover .todo__item__text
+		color: $fc !important
+
+// button	
+.todo__item__button
+	@extend .__fcolc
+	position: relative
+
+	margin-right: $p
+	min-width: $btn_size
+	height: $btn_size
+
+	background-color: $fcop
+	border-radius: 2 * $ps
+	.todo__item:hover &
+		background-color: $cop
+	.--checked &
+		background-color: $c !important
+	// svg
+	svg
+		width: 12px
+		height: 10px
+		fill: none
+		.--checked &
+			fill: currentColor
+
+// text
+.todo__item__text
+	width: calc(100% - $btn_size - $p)
+	.--checked &
+		@extend .__op
+		text-decoration: line-through
+
+.todo__item__title
+	margin-bottom: $ps
+
+.todo__item__description
+	position: relative
+
+	margin-bottom: $ps
+	width: 100%
+	white-space: nowrap
+	overflow: hidden
+
+	@extend .__font-small
+	@extend .__op
+	&::after
+		position: absolute
+		content: ''
+
+		right: 0
+		top: 0
+		bottom: 0
+		width: $pl
+
+		background-image: linear-gradient(to left, $bc, $bc00)

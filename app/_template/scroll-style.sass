@@ -1,14 +1,17 @@
+$scroll_border_width: 1px
+$scroll_width: 6px
+
 // фон скроллбара
 ::-webkit-scrollbar
-	width: $ps + 6px
+	width: $scroll_width + 2 * $scroll_border_width
 // btn-s
 ::-webkit-scrollbar-button
 	display: none
 // пустое пространство под индикатором прокрутки
 ::-webkit-scrollbar-track
-	background: linear-gradient(to bottom, $c2, $c2g)
+	background-color: $bc
 // индикатор прокрутки
 ::-webkit-scrollbar-thumb
-	background: linear-gradient(to bottom, $c, $cg)
+	background-image: linear-gradient(to bottom, $c, $ca)
 	border-radius: $ps
-	border: solid 3px $c2
+	border: solid $scroll_border_width $bc

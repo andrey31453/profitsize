@@ -8,8 +8,9 @@ const html_data = [
 			// header
 			'app/_template/parts/header.html',
 
-			// todo
+			// body
 			'app/todo/*.html',
+			'app/copyrait/*.html',
 
 			// footer
 			'app/_template/parts/footer.html',
